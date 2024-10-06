@@ -1,6 +1,6 @@
 # Trailblazer
 
-The **Trailblazer** project is designed to create an interactive web application that allows users to build a canvas, draw obstacles, and observe an object navigate from a starting point to an endpoint using the A* algorithm. This initiative unfolds in multiple phases, including infrastructure setup, backend and frontend development, integration, and culminates in deployment on a Kubernetes cluster. While the focus is on delivering an engaging user experience, the primary aim of this project is to enhance learning and deepen understanding of web application development and algorithm implementation.
+The **Trailblazer** project is designed to create an interactive web application that allows users to build a canvas, draw obstacles, and observe an object navigate from a starting point to an endpoint using the A* algorithm. While the focus is on delivering an engaging user experience, the primary aim of this project is to enhance learning and deepen understanding of web application development and algorithm implementation.
 
 ## Goal Architecture
 
