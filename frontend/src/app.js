@@ -1,4 +1,4 @@
-import { h } from 'snabbdom/h';
+import { h } from 'snabbdom';
 
 export default function App() {
   return h('div', { class: { 'container': true, 'mx-auto': true, 'p-4': true } }, [
