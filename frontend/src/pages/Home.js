@@ -2,14 +2,35 @@ import { h } from 'snabbdom'
 import Header from  '../components/Header'
 import Footer from '../components/Footer'
 
+import backgroundVideo from '../../public/assets/backgroundVideo.mp4'
+
 export default function Home() {
   return h('div', { 
-    class: { 'flex': true, 'flex-col': true, 'min-h-screen': true, 'bg-gradient-to-r':true, 'from-indigo-400':true, 'to-cyan-400': true}
+    class: { 'relative': true, 'min-h-screen': true, 'overflow-hidden': true, 'bg-[#aabbc4]':true}
   }, [
-    Header(),
-    LandingPage(),
-    Footer()
+    bgVideo(),
+    h('div', {
+      class: { 'relative': true, 'z-10': true, 'flex': true, 'flex-col': true, 'min-h-screen': true }
+    }, [
+      Header(),
+      LandingPage(),
+      Footer()
+    ])
   ])
+}
+
+function bgVideo() {
+  return h('video', {
+    class: { 'fixed': true, 'left-0': true, 'bottom-0': true, 'w-1/2': true, 'h-1/2': true, 'object-cover': true,'z-0': true
+    },
+    props: {
+      autoplay: true,
+      loop: true,
+      muted: true,
+      playsInline: true,
+      src: backgroundVideo
+    },
+  })
 }
 
 function LandingPage() {
@@ -17,7 +38,7 @@ function LandingPage() {
         class: { 'flex-grow': true, 'container': true, 'mx-auto': true, 'px-4': true, 'py-8': true }
         }, [
             h('div', {
-                class: {'bg-white': true, 'bg-opacity-90': true, 'rounded-lg': true, 'shadow-lg': true, 'p-8': true }
+                class: {'bg-white': true, 'bg-opacity-50': true, 'rounded-lg': true, 'shadow-lg': true, 'p-8': true, 'w-3/4':true, 'mx-auto':true}
             }, [
                 h('section', { 
                     class: { 'text-center': true, 'mb-12': true }
@@ -31,7 +52,7 @@ function LandingPage() {
                     ]),
 
                 h('section', { 
-                    class: { 'grid': true, 'grid-cols-1': true, 'md:grid-cols-3': true, 'gap-8': true, 'mb-12': true }
+                    class: { 'grid': true, 'grid-cols-1': true, 'md:grid-cols-3': true, 'gap-6': true, 'mb-12': true,}
                     }, [
                         FeatureCard('Select Start & End', 'Choose your journey\'s beginning and destination.'),
                         FeatureCard('Draw Obstacles', 'Map out the challenges in your path.'),
@@ -44,7 +65,8 @@ function LandingPage() {
                         h('button', { 
                             class: { 
                             'bg-blue-500': true, 'hover:bg-blue-700': true, 'text-white': true, 
-                            'font-bold': true, 'py-2': true, 'px-4': true, 'rounded': true
+                            'font-bold': true, 'py-2': true, 'px-4': true, 'rounded': true,
+                            'hover:shadow-lg':true, 'hover:-translate-y-1':true, 'transition-transform':true, 'duration-300':true, 'ease-in-out':true
                             },
                             on: { click: () => {window.location.href= '/login'}  }
                         }, 'Try Trailblazer Now'),
@@ -55,7 +77,7 @@ function LandingPage() {
 
 function FeatureCard(title, description) {
   return h('div', { 
-    class: { 'bg-white': true, 'p-6': true, 'rounded-lg': true, 'shadow-md': true }
+    class: { 'bg-white': true, 'p-6': true, 'rounded-lg': true, 'shadow-md': true, 'hover:shadow-lg':true, 'hover:-translate-y-3':true, 'transition-transform':true, 'duration-300':true, 'ease-in-out':true}
   }, [
     h('h3', { 
       class: { 'text-xl': true, 'font-semibold': true, 'mb-2': true, 'text-blue-500': true }
