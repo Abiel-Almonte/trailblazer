@@ -61,7 +61,7 @@ function SignupPage(state){
         h('div', { class: { 'flex': true, 'flex-row': true, 'gap-3': true, 'pb-4': true } }, [
             h('h1', { class: { 'text-3xl': true, 'font-bold': true, 'text-[#4B5563]': true, 'my-auto': true } }, 'Trailblazer')
         ]),
-        h('div', { class: { 'text-sm': true, 'font-light': true, 'text-gray-600': true, 'pb-8': true } }, 'Login to your profile.'),
+        h('div', { class: { 'text-sm': true, 'font-light': true, 'text-gray-600': true, 'pb-8': true } }, 'Create your profile.'),
         h('form', { 
             class: { 'flex': true, 'flex-col': true }, 
             on: {
@@ -121,11 +121,7 @@ function SignupPage(state){
             h('button', {
                 attrs: { type: 'submit' },
                 class: { 'w-full': true, 'text-[#FFFFFF]': true, 'bg-blue-600': true, 'focus:ring-4': true, 'focus:outline-none': true, 'focus:ring-primary-300': true, 'font-medium': true, 'rounded-lg': true, 'text-sm': true, 'px-5': true, 'py-2.5': true, 'text-center': true, 'mb-6': true }
-            }, 'Login'),
-            h('div', { class: { 'text-sm': true, 'font-light': true, 'text-gray-600': true, 'text-center': true } }, [
-                'Don\'t have an account yet? ',
-                h('a', { props: { href: '#/signup' }, class: { 'font-medium': true, 'text-blue-600': true, 'hover:underline': true } }, 'Sign Up')
-            ])
+            }, 'Sign Up'),
         ]),
     ]);
 }
