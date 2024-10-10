@@ -7,7 +7,7 @@ import backgroundVideo from '../../public/assets/tb7.webm'
 
 export default function Home() {
   return h('div', { 
-    class: { 'relative': true, 'min-h-screen': true, 'overflow-hidden': true, 'bg-[#B6E6FF]':true}
+    class: { 'relative': true, 'min-h-screen': true, 'overflow-hidden': true, 'bg-gradient-to-tr':true, 'from-amber-100':true, 'to-[#B6E6FF]':true}
   }, [
     bgVideo(),
     h('div', {
@@ -45,7 +45,7 @@ function LandingPage() {
                     class: { 'text-center': true, 'mb-12': true }
                 }, [
                     h('h1', { 
-                        class: { 'text-4xl': true, 'font-bold': true, 'text-blue-600': true, 'mb-2': true }
+                        class: { 'text-4xl': true, 'font-bold': true, 'text-[#4B5563]': true, 'mb-2': true }
                         }, 'Trailblazer'),
                     h('p', { 
                         class: { 'text-xl': true, 'text-gray-600': true }
