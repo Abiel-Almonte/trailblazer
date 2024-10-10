@@ -7,8 +7,9 @@ export default function Header() {
     h('div', { 
       class: { 'container': true, 'mx-auto': true, 'px-4': true, 'flex': true, 'justify-between': true, 'items-center': true }
     }, [
-      h('h1', { 
-        class: { 'text-2xl': true, 'font-bold': true, 'text-blue-600': true }
+      h('a', { 
+        class: { 'text-2xl': true, 'font-bold': true, 'text-blue-600': true },
+        props: {href: '/'}
       }, 'Trailblazer'),
       h('nav', [
         h('ul', { 
