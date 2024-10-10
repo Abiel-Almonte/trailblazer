@@ -24,7 +24,7 @@ export default function Header() {
           }, 'About')),
           h('li', h('a', { 
             class: { 'text-gray-600': true, 'hover:text-blue-500': true },
-            props: { href: '/login' }
+            props: { href: '#/login' }
           }, 'Login')),
         ])
       ])

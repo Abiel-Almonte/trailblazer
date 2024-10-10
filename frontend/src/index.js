@@ -12,7 +12,14 @@ const patch = init([
 
 let vnode = document.getElementById('app');
 function render() {
-  vnode = patch(vnode, App());
+  const path = window.location.hash.slice(1) || '/';
+  vnode = patch(vnode, App(path));
 }
 
 render();
+
+window.addEventListener('hashchange', render);
+
+export function navigate(path) {
+  window.location.hash = path;
+}

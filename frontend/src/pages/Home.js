@@ -1,12 +1,13 @@
 import { h } from 'snabbdom'
 import Header from  '../components/Header'
 import Footer from '../components/Footer'
+import { navigate } from '../index'
 
-import backgroundVideo from '../../public/assets/backgroundVideo.mp4'
+import backgroundVideo from '../../public/assets/tb7.webm'
 
 export default function Home() {
   return h('div', { 
-    class: { 'relative': true, 'min-h-screen': true, 'overflow-hidden': true, 'bg-[#aabbc4]':true}
+    class: { 'relative': true, 'min-h-screen': true, 'overflow-hidden': true, 'bg-[#B6E6FF]':true}
   }, [
     bgVideo(),
     h('div', {
@@ -68,7 +69,7 @@ function LandingPage() {
                             'font-bold': true, 'py-2': true, 'px-4': true, 'rounded': true,
                             'hover:shadow-lg':true, 'hover:-translate-y-1':true, 'transition-transform':true, 'duration-300':true, 'ease-in-out':true
                             },
-                            on: { click: () => {window.location.href= '/login'}  }
+                            on: { click: () => navigate('/login')  }
                         }, 'Try Trailblazer Now'),
                     ]),
                 ])
